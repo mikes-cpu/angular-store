@@ -1,0 +1,19 @@
+.container {
+  .container__title {
+    margin: 8rem 0 4rem 10%;
+    opacity: 0.6;
+    font-size: 5rem;
+  }
+  .container__sub-title {
+    margin: 0 0 8rem 10%;
+    opacity: 0.4;
+    font-size: 2rem;
+  }
+
+  .container__item-list {
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+}

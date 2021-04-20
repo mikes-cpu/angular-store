@@ -1,0 +1,31 @@
+.container {
+  max-width: 300px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+
+  .container__image {
+    margin-bottom: 1.5rem;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+
+    .image__image {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .container__title {
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  .container__desc {
+    margin-bottom: 1.5rem;
+  }
+  .container__price {
+    margin-bottom: 1.5rem;
+  }
+  .container__delivery {
+  }
+}

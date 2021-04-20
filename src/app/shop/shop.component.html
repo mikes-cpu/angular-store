@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="container__title">Welcome to the store</h1>
+  <h2 class="container__sub-title">The best place to buy your stuff</h2>
+  <div *ngIf="featureProduct === false" class="container__item-list">
+    <app-item-list
+      *ngFor="let product of products"
+      [productsList]="product"
+      (featureContentClicked)="onFeatureContentClicked(product)"
+    ></app-item-list>
+  </div>
+  <app-item-description
+    *ngIf="featureProduct === true"
+    [featureProductDetails]="featureProductDetails"
+    (backButtonClick)="onBackButtonClick($event)"
+    (addToCartClick)="onAddToCartClick($event)"
+  ></app-item-description>
+</div>
+<app-footer></app-footer>

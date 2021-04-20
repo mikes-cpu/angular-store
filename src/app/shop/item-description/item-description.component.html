@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="container__image">
+    <img
+      class="image__image"
+      src="{{ featureProductDetails.image }}"
+      alt="{{ featureProductDetails.product_name }}"
+    />
+  </div>
+  <div class="container__product-info">
+    <h2 class="product-info__title">
+      {{ featureProductDetails.product_name }}
+    </h2>
+    <p class="product-info__desc">{{ featureProductDetails.desc }}</p>
+    <p class="product-info__more-info">{{ featureProductDetails.moreInfo }}</p>
+    <h3 class="product-info__price">{{ featureProductDetails.price }}</h3>
+    <p class="product-info__delivery">FREE DELIVERY</p>
+    <button
+      (click)="addToCartButton(featureProductDetails)"
+      class="btn product-info__add-to-cart-button"
+    >
+      Add To Shopping Cart
+    </button>
+    <button
+      (click)="backButton()"
+      class="btn product-info__back-to-products-button"
+    >
+      Back To Products
+    </button>
+  </div>
+</div>
