@@ -1,3 +1,9 @@
 .container {
   min-height: 100vh;
+
+  .container__footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
 }

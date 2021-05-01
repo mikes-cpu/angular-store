@@ -1,10 +1,10 @@
 <div class="container">
   <h1 class="container__title">Welcome to the store</h1>
   <h2 class="container__sub-title">The best place to buy your stuff</h2>
-  <div *ngIf="featureProduct === false" class="container__item-list">
+  <div class="container__item-list" *ngIf="featureProduct === false">
     <app-item-list
       *ngFor="let product of products"
-      [productsList]="product"
+      [product]="product"
       (featureContentClicked)="onFeatureContentClicked(product)"
     ></app-item-list>
   </div>
@@ -15,4 +15,3 @@
     (addToCartClick)="onAddToCartClick($event)"
   ></app-item-description>
 </div>
-<app-footer></app-footer>

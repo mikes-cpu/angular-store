@@ -6,9 +6,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
-  @Input() productsList;
+  @Input() product;
 
-  @Output() featureContentClicked = new EventEmitter<void>();
+  @Output() featureContentClicked = new EventEmitter<null>();
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -10,6 +11,18 @@ import { ItemDescriptionComponent } from './shop/item-description/item-descripti
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { HomeComponent } from './home/home.component';
+import { InfoComponent } from './info/info.component';
+import { ShoppingCartItemComponent } from './shopping-cart/shopping-cart-item/shopping-cart-item.component';
+
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'info', component: InfoComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'shop/:product_name', component: ItemDescriptionComponent },
+  { path: 'cart', component: ShoppingCartComponent },
+];
 
 @NgModule({
   declarations: [
@@ -20,11 +33,14 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ItemComponent,
     ItemDescriptionComponent,
     FooterComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    HomeComponent,
+    ShoppingCartItemComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,14 +3,14 @@
     <img
       (click)="clickHandler()"
       class="image__image"
-      src="{{ productsList.image }}"
-      alt="{{ productsList.product_name }}"
+      src="{{ product.image }}"
+      alt="{{ product.product_name }}"
     />
   </div>
   <h2 (click)="clickHandler()" class="container__title">
-    {{ productsList.product_name }}
+    {{ product.product_name }}
   </h2>
-  <p class="container__desc">{{ productsList.desc }}</p>
-  <h3 class="container__price">{{ productsList.price }}</h3>
+  <p class="container__desc">{{ product.desc }}</p>
+  <h3 class="container__price">£{{ product.price }}</h3>
   <p class="container__delivery">FREE DELIVERY</p>
 </div>

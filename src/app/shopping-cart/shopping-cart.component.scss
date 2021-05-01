@@ -1,0 +1,45 @@
+.container {
+  margin-bottom: 20rem;
+  .container__title {
+    margin: 8rem 0 4rem 10%;
+    opacity: 0.6;
+    font-size: 5rem;
+  }
+  .container__sub-title {
+    margin: 0 0 8rem 10%;
+    opacity: 0.4;
+    font-size: 2rem;
+  }
+
+  .container__cart-items {
+    margin: 0 10%;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container__final-price {
+    margin: 0 10%;
+    hr {
+      margin-bottom: 2rem;
+    }
+    .final-price__final-price {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+    .final-price__checkout-button {
+      display: block;
+      margin-left: auto;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-top: 4rem;
+      background-color: #fff;
+      border: 1px solid grey;
+      border-radius: 0.2rem;
+      padding: 1rem 2rem;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+  }
+}

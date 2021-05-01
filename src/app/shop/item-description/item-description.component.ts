@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'app-item-description',
@@ -9,12 +11,13 @@ export class ItemDescriptionComponent implements OnInit {
   @Input() featureProductDetails;
 
   @Output() backButtonClick = new EventEmitter<boolean>();
-  @Output() addToCartClick = new EventEmitter<Object>();
+  // @Output() addToCartClick = new EventEmitter<Object>();
 
 
-  constructor() { }
+  constructor(private shared: SharedService) { }
 
   ngOnInit(): void {
+
   }
 
   backButton() {
@@ -22,6 +25,7 @@ export class ItemDescriptionComponent implements OnInit {
   }
 
   addToCartButton(addedProduct) {
-    this.addToCartClick.emit(addedProduct)
+    this.shared.addProduct(addedProduct)
+    this.shared.addPrice(addedProduct)
   }
 }

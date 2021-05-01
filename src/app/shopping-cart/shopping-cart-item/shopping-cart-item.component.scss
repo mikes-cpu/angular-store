@@ -1,0 +1,40 @@
+.container {
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  .container__products {
+    display: flex;
+    .products__image {
+      margin-bottom: 1.5rem;
+      height: 200px;
+      width: 200px;
+      cursor: pointer;
+
+      .image__image {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .products__product-info {
+      margin-left: 4rem;
+      margin-top: 4rem;
+
+      .product-info__name {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      .product-info__delivery {
+        font-size: 1.5rem;
+        opacity: 0.6;
+      }
+    }
+
+    .products__price {
+      margin-left: 10rem;
+      margin-top: 4rem;
+      font-size: 2rem;
+      margin-left: auto;
+    }
+  }
+}

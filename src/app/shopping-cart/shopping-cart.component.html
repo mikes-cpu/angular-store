@@ -1,14 +1,15 @@
 <div class="container">
-  <h1>Shopping Cart</h1>
-  <h2>Here are all your items you want</h2>
-  <div class="container__product-container">
-    <div class="product-container__image">
-      <img src="" alt="" />
-    </div>
-    <div class="product-container__product-info">
-      <h2>Title</h2>
-      <p>Price</p>
-      <h3>FREE Delivery</h3>
-    </div>
+  <h1 class="container__title">Your Cart</h1>
+  <h2 class="container__sub-title">the following items are ready to buy</h2>
+  <div class="container__cart-items">
+    <app-shopping-cart-item
+      *ngFor="let product of products"
+      [product]="product"
+    ></app-shopping-cart-item>
+  </div>
+  <div class="container__final-price">
+    <hr />
+    <h3 class="final-price__final-price">£{{ currentTotal }}</h3>
+    <!-- <button class="final-price__checkout-button">Checkout</button> -->
   </div>
 </div>
