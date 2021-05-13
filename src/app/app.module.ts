@@ -17,10 +17,7 @@ import { ShoppingCartItemComponent } from './shopping-cart/shopping-cart-item/sh
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'info', component: InfoComponent },
-  { path: 'shop', component: ShopComponent },
-  { path: 'shop/:product_name', component: ItemDescriptionComponent },
+  { path: '', component: ShopComponent },
   { path: 'cart', component: ShoppingCartComponent },
 ];
 
